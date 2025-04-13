@@ -1,5 +1,6 @@
 import "./App.css";
 import data from "./data.json";
+import { Book } from "./components/Book";
 
 function App() {
   const { books } = data;
@@ -8,6 +9,12 @@ function App() {
   return (
     <>
       <div>Book library goes here</div>
+      
+
+
+    {books.map((book, index) => (
+        <Book key={index} book={book} />
+      ))}
     </>
   );
 }
